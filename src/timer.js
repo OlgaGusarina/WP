@@ -1,10 +1,11 @@
 import { formatError } from "./utils.js";
-import "./howler.js"
+import { Howl } from "howler";
 
 const timerBtns = document.getElementById('timer_btns');
 timerBtns.addEventListener('click', timerOnOff);
 const timeLeft = document.getElementById('time_left'); // где будет выводиться на странице
 let start; // для интервала
+const sound = new Howl({ src: ['./src/01070.mp3'] });
 
 function timerOnOff(event) {
     let [minutes, seconds] = document.getElementById('user_time').value.match(/\d\d/g); // достаём из инпута время
@@ -23,13 +24,7 @@ function timerOnOff(event) {
         if (minutes == 0 && seconds == -1) {  // автоматический стоп когда 00:00
             clearInterval(start);
             timeLeft.innerHTML = formatError("00:00 время вышло!");
-            playSound();
+            sound.play();
         }
     }
-}
-
-function playSound() {
-    var audio = new Audio(); // Создаём новый элемент Audio
-    audio.src = "./04038.mp3"; // Указываем путь к звуку "клика"
-    audio.play(); // Автоматически запускаем
 }

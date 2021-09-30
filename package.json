@@ -1,0 +1,37 @@
+{
+  "name": "webpackbuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode=development",
+    "build": "webpack --mode=production",
+    "serve": "webpack serve --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlgaGusarina/WP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlgaGusarina/WP/issues"
+  },
+  "homepage": "https://github.com/OlgaGusarina/WP#readme",
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "howler": "^2.2.3",
+    "luxon": "^2.0.2",
+    "webpack-bundle-analyzer": "^4.4.2"
+  },
+  "devDependencies": {
+    "css-loader": "^6.3.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "lodash": "^4.17.21",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.54.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0"
+  }
+}
