@@ -1,5 +1,5 @@
 import { formatError } from "./utils.js";
-import "../node_modules/howler/src/howler.core.js";
+import { Howl } from "howler";
 
 const timerBtns = document.getElementById('timer_btns');
 timerBtns.addEventListener('click', timerOnOff);

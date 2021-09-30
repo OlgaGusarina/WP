@@ -1,4 +1,4 @@
-import DateTime from "../node_modules/luxon/src/datetime.js";
+import { DateTime } from "luxon";
 export function diffDates(firstDate, secondDate) {
     firstDate = DateTime.fromISO(firstDate);
     secondDate = DateTime.fromISO(secondDate);
